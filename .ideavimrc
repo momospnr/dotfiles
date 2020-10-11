@@ -1,0 +1,37 @@
+# ノーマルモード
+## Enterで改行
+noremap <CR> i<CR><Esc>
+## コマンドプレフィックス入れ替え
+noremap ; :
+noremap : ;
+## 移動コマンド入れ替え
+noremap <C-a> 0
+noremap <C-e> $
+noremap <C-p> k
+noremap <C-n> j
+noremap <C-f> l
+noremap <C-b> h
+
+# ヴィジュアルモード
+## コマンドプレフィックス入れ替え
+voremap ; :
+voremap : ;
+## 移動コマンド入れ替え
+noremap <C-a> 0
+noremap <C-e> $
+noremap <C-p> k
+noremap <C-n> j
+noremap <C-f> l
+noremap <C-b> h
+
+# インサートモード
+## 素早くjjと入力するとESCとみなす
+inoremap jj <Esc>
+
+# 共通
+## インサートモードから抜けるとIMEをオフにする
+set imisert=2
+## クリップボード共有
+set clipboard=unnamed
+## 行をまたいで移動
+set whichwrap=h,l,<,>,[,]

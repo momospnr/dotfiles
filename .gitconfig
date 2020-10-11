@@ -1,0 +1,53 @@
+[user]
+  name = momospnr
+  email = h.tagawa@momoirospanner.app
+
+[alias]
+  # mergeされたbranchを削除
+  delete-merged-branches = !git branch --merged | grep -v 'master\\|develop' | xargs -I % git branch -d %
+  # commit logをいい感じに表示
+  graph = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
+  # staged diff
+  diffs = diff --cached
+  # stageから戻す
+  unstage = reset HEAD
+  # branch一覧を更新日時でソートしていい感じに表示
+  br = for-each-ref --sort=committerdate refs/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
+  # ショートカット
+  st = status
+  gr = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
+  cm = commit
+  co = checkout
+  b = branch
+  sw = switch
+
+[color]
+  ui = auto
+
+[core]
+  excludesfile = ~/.gitignore
+  editor = code --wait
+
+[pull]
+	rebase = false
+
+[grep]
+  lineNumber = true
+
+[filter "lfs"]
+  process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+
+[init]
+	templatedir = ~/.git-templates/git-secrets
+
+[ghq]
+	root = /Users/momoirospanner/dev/src
+
+# [secrets]
+#   providers = git secrets --aws-provider
+#   patterns = [A-Z0-9]{20}
+#   patterns = (\"|')?(AWS|aws|Aws)?_?(SECRET|secret|Secret)?_?(ACCESS|access|Access)?_?(KEY|key|Key)(\"|')?\\s*(:|=>|=)\\s*(\"|')?[A-Za-z0-9/\\+=]{40}(\"|')?
+#   patterns = (\"|')?(AWS|aws|Aws)?_?(ACCOUNT|account|Account)_?(ID|id|Id)?(\"|')?\\s*(:|=>|=)\\s*(\"|')?[0-9]{4}\\-?[0-9]{4}\\-?[0-9]{4}(\"|')?

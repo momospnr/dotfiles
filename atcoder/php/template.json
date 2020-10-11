@@ -1,0 +1,6 @@
+{
+  "task":{
+    "program": ["src/Main.php", "tests/MainTest.php"],
+    "submit": "src/Main.php"
+  }
+}
