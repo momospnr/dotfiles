@@ -28,9 +28,12 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # use php on homebrew
+## php 8.0
+# export PATH="/usr/local/opt/php/bin:$PATH"
+# export PATH="/usr/local/opt/php/sbin:$PATH"
 ## php 7.4
-export PATH="/usr/local/opt/php/bin:$PATH"
-export PATH="/usr/local/opt/php/sbin:$PATH"
+export PATH="/usr/local/opt/php@7.4/bin:$PATH"
+export PATH="/usr/local/opt/php@7.4/sbin:$PATH"
 ## php 7.3
 #export PATH="/usr/local/opt/php@7.3/bin:$PATH"
 #export PATH="/usr/local/opt/php@7.3/sbin:$PATH"
