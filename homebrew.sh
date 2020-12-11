@@ -21,6 +21,9 @@ which brew >/dev/null 2>&1 && brew tap homebrew/cask-fonts
 formulas=(
   git
   zsh
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+  starship
   gibo
   wget
   curl
@@ -94,6 +97,7 @@ casks=(
   kindle-previewer
   calibre
   table-tool
+  rectangle
 )
 
 echo "installing brew casks"
