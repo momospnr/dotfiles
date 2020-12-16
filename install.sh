@@ -18,7 +18,10 @@ for f in .??*; do
   ln -snfv "$DIR/$f" ~
 done
 
-sudo ln -snfv "$DIR/shells" "/etc/shells"
+ln -snfv "$DIR/shells" "/etc/shells"
+
+mkdir -p ~/.config
+ln -snfv "$DIR/starship.toml" "~/.config/starship.toml"
 
 cat << END
 
