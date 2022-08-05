@@ -7,10 +7,9 @@ DIR=$(cd $(dirname $0) && pwd)
 
 cd $DIR
 
-ln -snfv $DIR/php/7.2/php.ini /usr/local/etc/php/7.2/php.ini
-ln -snfv $DIR/php/7.3/php.ini /usr/local/etc/php/7.3/php.ini
 ln -snfv $DIR/php/7.4/php.ini /usr/local/etc/php/7.4/php.ini
 ln -snfv $DIR/php/8.0/php.ini /usr/local/etc/php/8.0/php.ini
+ln -snfv $DIR/php/8.1/php.ini /usr/local/etc/php/8.1/php.ini
 
 cat << END
 
