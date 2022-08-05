@@ -5,30 +5,16 @@ export LANG=ja_JP.UTF-8
 export PATH=$HOME/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 
-# nodebrew
-export PATH=$HOME/.nodebrew/current/bin:$PATH
-export NODEBREW_ROOT=$HOME/.nodebrew
-
-# yarn
-export PATH="$PATH:/opt/yarn-[version]/bin"
+# volta
+export VOLTA_HOME=$HOME/.volta
+export PATH=$VOLTA_HOME/bin:$PATH
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-# use php on homebrew
-## php 8.0
-# export PATH="/usr/local/opt/php/bin:$PATH"
-# export PATH="/usr/local/opt/php/sbin:$PATH"
-## php 7.4
-export PATH="/usr/local/opt/php@7.4/bin:$PATH"
-export PATH="/usr/local/opt/php@7.4/sbin:$PATH"
-## php 7.3
-#export PATH="/usr/local/opt/php@7.3/bin:$PATH"
-#export PATH="/usr/local/opt/php@7.3/sbin:$PATH"
-## php 7.2
-# export PATH="/usr/local/opt/php@7.2/bin:$PATH"
-# export PATH="/usr/local/opt/php@7.2/sbin:$PATH"
+## phpenv
+export PATH="$HOME/.phpenv/bin:$PATH"
 
 # user mysql@5.7 on homebrew
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"

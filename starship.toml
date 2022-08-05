@@ -104,4 +104,4 @@ behind = "⇣${count}"
 [git_branch]
 style = "#ff33b8 bold"
 always_show_remote = true
-fortmat = "on [$symbol $remote_name $branch]($style) "
+format = "on [$symbol $remote_name $branch]($style) "
