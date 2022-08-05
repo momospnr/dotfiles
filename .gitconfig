@@ -15,6 +15,7 @@
   br = for-each-ref --sort=committerdate refs/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
   # ショートカット
   st = status
+  pl = pull
   gr = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
   cm = commit
   co = checkout
@@ -41,10 +42,10 @@
   smudge = git-lfs smudge -- %f
 
 [init]
-	templatedir = ~/.git-templates/git-secrets
+  templatedir = ~/.git-templates/git-secrets
 
 [ghq]
-	root = /Users/momoirospanner/dev/src
+  root = /Users/momoirospanner/dev/src
 
 # [secrets]
 #   providers = git secrets --aws-provider
