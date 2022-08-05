@@ -20,6 +20,7 @@ which brew >/dev/null 2>&1 && brew tap homebrew/cask-fonts
 
 formulas=(
   git
+  gh
   zsh
   zsh-autosuggestions
   zsh-syntax-highlighting
@@ -29,9 +30,8 @@ formulas=(
   curl
   tree
   yarn
-  nodebrew
-  php@7.2
-  php@7.3
+  php@7.4
+  php@8.0
   php
   mysql@5.7
   redis
@@ -50,6 +50,10 @@ formulas=(
   graphviz
   libiconv
   gcc
+  the_silver_searcher
+  jq
+  act
+  volta
 )
 
 echo "installing brew apps"
@@ -75,16 +79,13 @@ casks=(
   iterm2
   owasp-zap
   slack
-  chatwork
   1password
   dropbox
   onedrive
-  evernote
   skype
   microsoft-teams
   skitch
   raindropio
-  spotify
   quik
   font-hack-nerd-font
   font-ricty-diminished
@@ -92,12 +93,17 @@ casks=(
   keka
   phpstorm
   microsoft-teams
-  zoomus
+  zoom
   kindle
-  kindle-previewer
-  calibre
   table-tool
   rectangle
+  authy
+  session-manager-plugin
+  gather
+  figma
+  github
+  deepl
+  meetingbar
 )
 
 echo "installing brew casks"
