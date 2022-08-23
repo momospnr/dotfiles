@@ -6,15 +6,6 @@ which brew >/dev/null 2>&1 || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubu
 echo "checking homebrew"
 which brew >/dev/null 2>&1 && brew doctor
 
-echo "updating homebrew"
-which brew >/dev/null 2>&1 && brew update
-
-echo "adding brew"
-which brew >/dev/null 2>&1 && brew tap brew/heroku
-
-echo "enable brew-cask"
-which brew >/dev/null 2>&1 && brew cask
-
 echo "adding brew-cask fonts"
 which brew >/dev/null 2>&1 && brew tap homebrew/cask-fonts
 
@@ -35,7 +26,6 @@ formulas=(
   php
   mysql@5.7
   redis
-  heroku
   awscli
   circleci
   composer
@@ -54,15 +44,13 @@ formulas=(
   jq
   act
   volta
+  yukiarrr/tap/ecsk
+  imagemagick
 )
 
 echo "installing brew apps"
 for formula in "${formulas[@]}"; do
-  if [ "$formula" = "yarn" ]; then
-    brew install yarn --ignore-dependencies || brew upgrade yarn
-  else
-    brew install $formula || brew upgrade $formula
-  fi
+  brew install $formula || brew upgrade $formula
 done
 
 casks=(
@@ -73,7 +61,6 @@ casks=(
   visual-studio-code
   docker
   postman
-  virtualbox
   tableplus
   dbngin
   iterm2
@@ -83,12 +70,12 @@ casks=(
   dropbox
   onedrive
   skype
-  microsoft-teams
   skitch
   raindropio
   quik
   font-hack-nerd-font
   font-ricty-diminished
+  font-fira-code
   font-noto-sans-cjk-jp
   keka
   phpstorm
@@ -104,11 +91,15 @@ casks=(
   github
   deepl
   meetingbar
+  clipy
+  discord
+  adobe-creative-cloud
+  rambox
 )
 
 echo "installing brew casks"
 for cask in ${casks[@]}; do
-  brew cask install $cask || brew cask upgrade $cask
+  brew install --cask $cask || brew upgrade --cask $cask
 done
 
 echo "cleaning up brew"
