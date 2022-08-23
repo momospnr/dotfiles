@@ -1,10 +1,6 @@
 #LANG
 export LANG=ja_JP.UTF-8
 
-# Homebrew
-export PATH=$HOME/bin:$PATH
-export PATH=/usr/local/sbin:$PATH
-
 # volta
 export VOLTA_HOME=$HOME/.volta
 export PATH=$VOLTA_HOME/bin:$PATH
@@ -12,9 +8,6 @@ export PATH=$VOLTA_HOME/bin:$PATH
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
-## phpenv
-export PATH="$HOME/.phpenv/bin:$PATH"
 
 # user mysql@5.7 on homebrew
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"

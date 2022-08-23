@@ -21,7 +21,7 @@ done
 ln -snfv "$DIR/shells" "/etc/shells"
 
 mkdir -p ~/.config
-ln -snfv "$DIR/starship.toml" "~/.config/starship.toml"
+ln -snfv "$DIR/starship.toml" ~/.config/starship.toml
 
 cat << END
 
