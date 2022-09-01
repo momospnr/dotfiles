@@ -45,7 +45,7 @@
   templatedir = ~/.git-templates/git-secrets
 
 [ghq]
-  root = /Users/momoirospanner/dev/src
+  root = ~/dev/src
 
 # [secrets]
 #   providers = git secrets --aws-provider

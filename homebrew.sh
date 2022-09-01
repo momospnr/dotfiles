@@ -2,6 +2,7 @@
 
 echo "installing homebrew"
 which brew >/dev/null 2>&1 || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+exec $SHELL -l
 
 echo "checking homebrew"
 which brew >/dev/null 2>&1 && brew doctor
