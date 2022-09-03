@@ -25,6 +25,7 @@ formulas=(
   php@7.4
   php@8.0
   php
+  mysql
   mysql@5.7
   redis
   awscli
@@ -47,6 +48,8 @@ formulas=(
   volta
   yukiarrr/tap/ecsk
   imagemagick
+  wrk
+  rustup-init
 )
 
 echo "installing brew apps"
