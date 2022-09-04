@@ -99,6 +99,7 @@ casks=(
   discord
   adobe-creative-cloud
   rambox
+  alt-tab
 )
 
 echo "installing brew casks"
