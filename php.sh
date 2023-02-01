@@ -14,6 +14,8 @@ phpenv update
 
 # Link brew installed php
 curl -fsSL https://gist.githubusercontent.com/yuki777/6244823b8aa8cf4457e97e6407ada5ad/raw/19c96b476b038935ce57f72ac60ea616a23b5e73/link-phps.bash | bash
+# ReLink
+# curl -fsSL https://gist.githubusercontent.com/yuki777/6244823b8aa8cf4457e97e6407ada5ad/raw/38bc1093bc208b88944970b0ce5c91c9b2ac590c/link-phps.bash | bash
 phpenv global 8.1
 exec $SHELL -l
 

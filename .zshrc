@@ -36,7 +36,7 @@ source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 setopt nolistbeep
 
 # History設定
-HISTFILE=~/.zsh_history
+HISTFILE=$HOME/.zsh_history
 HISTSIZE=100000
 SAVEHIST=100000
 setopt share_history
@@ -47,3 +47,7 @@ setopt hist_reduce_blanks
 
 # starship
 eval "$(starship init zsh)"
+
+# 1Password
+export PATH="$(brew --prefix)/opt/openssl@1.1/bin:$PATH"
+source $HOME/.config/op/plugins.sh

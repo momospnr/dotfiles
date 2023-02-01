@@ -71,6 +71,7 @@ casks=(
   owasp-zap
   slack
   1password
+  1password-cli
   dropbox
   onedrive
   skype
