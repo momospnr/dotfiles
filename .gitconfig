@@ -30,7 +30,7 @@
   editor = code --wait
 
 [pull]
-	rebase = false
+  rebase = false
 
 [grep]
   lineNumber = true
@@ -43,6 +43,7 @@
 
 [init]
   templatedir = ~/.git-templates/git-secrets
+  defaultBranch = main
 
 [ghq]
   root = ~/dev/src

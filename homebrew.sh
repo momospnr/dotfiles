@@ -75,7 +75,6 @@ casks=(
   dropbox
   onedrive
   skype
-  skitch
   raindropio
   quik
   font-hack-nerd-font
@@ -89,7 +88,6 @@ casks=(
   kindle
   table-tool
   rectangle
-  authy
   session-manager-plugin
   gather
   figma
