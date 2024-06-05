@@ -42,7 +42,7 @@
   smudge = git-lfs smudge -- %f
 
 [init]
-  templatedir = ~/.git-templates/git-secrets
+  # templatedir = ~/.git-templates/git-secrets
   defaultBranch = main
 
 [ghq]

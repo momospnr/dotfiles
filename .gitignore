@@ -2,3 +2,5 @@
 .vscode
 Thumbs.db
 .php-version
+.tool-versions
+.mise.toml

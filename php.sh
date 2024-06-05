@@ -32,6 +32,7 @@ fi
 ln -snfv $DIR/php/7.4/php.ini $PHP_INI_DIR/php/7.4/php.ini
 ln -snfv $DIR/php/8.0/php.ini $PHP_INI_DIR/php/8.0/php.ini
 ln -snfv $DIR/php/8.1/php.ini $PHP_INI_DIR/php/8.1/php.ini
+ln -snfv $DIR/php/8.2/php.ini $PHP_INI_DIR/php/8.2/php.ini
 
 cat << END
 

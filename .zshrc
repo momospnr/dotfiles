@@ -3,7 +3,7 @@ export LANG=ja_JP.UTF-8
 
 # volta
 export VOLTA_HOME=$HOME/.volta
-export PATH=$VOLTA_HOME/bin:$PATH
+export PATH="$VOLTA_HOME/bin:$PATH"
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
@@ -19,6 +19,10 @@ export GOROOT="$(brew --prefix golang)/libexec"
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 test -d "${GOPATH}" || mkdir "${GOPATH}"
 test -d "${GOPATH}/src/github.com" || mkdir -p "${GOPATH}/src/github.com"
+
+# openjdk
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export JAVA_HOME="/opt/homebrew/Cellar/openjdk/19.0.2/libexec/openjdk.jdk/Contents/Home"
 
 # 補完
 autoload -Uz compinit
@@ -50,4 +54,6 @@ eval "$(starship init zsh)"
 
 # 1Password
 export PATH="$(brew --prefix)/opt/openssl@1.1/bin:$PATH"
-source $HOME/.config/op/plugins.sh
+# source $HOME/.config/op/plugins.sh
+
+export DD_INSTRUMENTATION_TELEMETRY_ENABLE=0

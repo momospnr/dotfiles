@@ -21,13 +21,6 @@ formulas=(
   wget
   curl
   tree
-  yarn
-  php@7.4
-  php@8.0
-  php
-  mysql
-  mysql@5.7
-  redis
   awscli
   circleci
   composer
@@ -50,6 +43,8 @@ formulas=(
   imagemagick
   wrk
   rustup-init
+  bison
+  re2c
 )
 
 echo "installing brew apps"
@@ -74,9 +69,7 @@ casks=(
   1password-cli
   dropbox
   onedrive
-  skype
   raindropio
-  quik
   font-hack-nerd-font
   font-ricty-diminished
   font-fira-code
@@ -85,20 +78,19 @@ casks=(
   phpstorm
   microsoft-teams
   zoom
-  kindle
   table-tool
   rectangle
   session-manager-plugin
-  gather
   figma
   github
   deepl
   meetingbar
-  clipy
   discord
   adobe-creative-cloud
-  rambox
   alt-tab
+  raycast
+  mysqlworkbench
+  warp
 )
 
 echo "installing brew casks"
