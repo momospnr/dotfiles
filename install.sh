@@ -23,6 +23,9 @@ ln -snfv "$DIR/shells" "/etc/shells"
 mkdir -p ~/.config
 ln -snfv "$DIR/starship.toml" ~/.config/starship.toml
 
+mkdir -p ~/.claude
+ln -snfv "$DIR/CLAUDE.md" ~/.claude/CLAUDE.md
+
 cat << END
 
 END
