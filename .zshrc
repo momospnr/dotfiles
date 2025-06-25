@@ -12,6 +12,16 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # user mysql@5.7 on homebrew
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
+# phpenv
+export PHPENV_ROOT="${HOME}/.phpenv"
+if [ -d "${PHPENV_ROOT}" ]; then
+  export PATH="${PHPENV_ROOT}/bin:${PATH}"
+  eval "$(phpenv init -)"
+fi
+
+# MySQL Client
+export PATH="/opt/homebrew/opt/mysql-client@8.4/bin:$PATH"
+
 # Golang
 export GOPATH="${HOME}/dev"
 export GO111MODULE=on
@@ -19,6 +29,9 @@ export GOROOT="$(brew --prefix golang)/libexec"
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 test -d "${GOPATH}" || mkdir "${GOPATH}"
 test -d "${GOPATH}/src/github.com" || mkdir -p "${GOPATH}/src/github.com"
+
+# python
+alias python='python3'
 
 # openjdk
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
@@ -52,8 +65,13 @@ setopt hist_reduce_blanks
 # starship
 eval "$(starship init zsh)"
 
-# 1Password
+# Code
+[[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
+
+# openssl
 export PATH="$(brew --prefix)/opt/openssl@1.1/bin:$PATH"
-# source $HOME/.config/op/plugins.sh
+
+# 1Password
+source $HOME/.config/op/plugins.sh
 
 export DD_INSTRUMENTATION_TELEMETRY_ENABLE=0
