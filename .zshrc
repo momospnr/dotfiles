@@ -33,6 +33,12 @@ test -d "${GOPATH}/src/github.com" || mkdir -p "${GOPATH}/src/github.com"
 # python
 alias python='python3'
 
+# pipx
+export PATH="$HOME/.local/bin:$PATH"
+
+# awsume
+alias awsume=". awsume"
+
 # openjdk
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export JAVA_HOME="/opt/homebrew/Cellar/openjdk/19.0.2/libexec/openjdk.jdk/Contents/Home"
@@ -75,3 +81,7 @@ export PATH="$(brew --prefix)/opt/openssl@1.1/bin:$PATH"
 source $HOME/.config/op/plugins.sh
 
 export DD_INSTRUMENTATION_TELEMETRY_ENABLE=0
+
+# Claude Code
+export CLAUDE_CODE_USE_BEDROCK=1
+export ANTHROPIC_MODEL='us.anthropic.claude-3-7-sonnet-20250219-v1:0'
